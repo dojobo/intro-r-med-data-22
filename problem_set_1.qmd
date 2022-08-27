@@ -1,0 +1,170 @@
+---
+title: "Problem Set 1"
+subtitle: "RStudio orientation and R basics"
+author: "Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System"
+date: "June 14, 2022"
+format: 
+  html: default
+  gfm: default
+editor: visual
+execute:
+  eval: false
+---
+
+# Problem Set 1
+
+Due: 6/20/22
+
+## Refresher
+
+"How do I run code chunks?"
+
+-   line-by-line (recommended):
+    -   Ctrl-Enter (Windows), Cmd-Enter (macOS), or
+    -   click Run menu at top right of your editor, choose Run Selected Lines
+-   whole chunk:
+    -   click green button ▸ at top right of chunk, or
+
+    -   Ctrl-Shift-Enter (Windows), Cmd-Shift-Enter (macOS)
+
+Run this chunk first to attach packages and load some data:
+
+```{r}
+library(tidyverse)
+
+cvdrisk <- read_csv("data/genoData.csv")
+```
+
+The data are loaded as a data frame object named `cvdrisk` (see Environment pane). To reference one of its variables (columns), we can use the `$` (dollar sign), e.g., `cvdrisk$patientID`
+
+"What are these left-pointing arrows?"--the assignment operator
+
+```{r}
+# reminder: <- is for object assignment
+# keyboard shortcuts: Alt+hyphen (Windows), Option+hyphen (macOS)
+# in this example, I store some sex observations as the object patient_sex
+patient_sex <- c("F", "F", "M", "F", "M")
+
+# also: typing the name of an object will show a representation of it in your console
+patient_sex
+```
+
+## Missing values (`NA`)
+
+In R, a missing value (equivalent to an empty cell in Excel---NOT to zero) is represented with `NA` (not available). You can't use it in calculations because its uncertainty taints any numbers it interacts with. Many times, the presence of `NA` is expected and fine; some variables are empty sometimes.
+
+Try the code below:
+
+```{r}
+my_values <- c(1, 0, 3, 4)
+# predict: what will sum() and mean() of my_values be?
+# calculate them below:
+
+
+some_values <- c(1, NA, 3, 4)
+# predict: what will sum() and mean() of some_values be?
+# calculate them below:
+
+
+
+# why does this happen?
+# how can we fix this problem? 
+# (hint: run ?sum or ?mean and look in the Arguments section)
+
+# can you fix the sum() and mean() function calls for some_values?
+# (hint: if you're unsure of the syntax, run ?sum and check the Examples)
+
+
+```
+
+How to check whether a vector has any `NA`s? The `anyNA()` function:
+
+```{r}
+anyNA(my_values)
+anyNA(some_values)
+```
+
+There is a help file for missing values: `?NA`
+
+## More vector functions that are good to know
+
+Using `unique()`, `length()`, and `sample()`, try answering the following in the code chunk below:
+
+-   what unique values are present in `cvdrisk$race`?
+-   how many values are in `my_values`? In the `t2d` column of `cvdrisk`?
+-   what does a random sample of 15 values from `cvdrisk`'s `bmi` variable look like?
+
+```{r}
+
+
+```
+
+And the awesome `table()` function! Try it:
+
+```{r}
+table(cvdrisk$race)
+```
+
+What does it seem to do?
+
+## Object permanence
+
+Not only do you need to remember to assign function results as objects, but most operations on objects do *not* directly modify the object, unless you reassign it. Consider:
+
+```{r}
+my_values     # 1 0 3 4
+my_values+1   # 2 1 4 5
+
+# predict: what is the value of my_values now? check below:
+
+
+# were you correct?
+
+```
+
+An operation on an object typically returns a modified copy of the object---"here's what adding 1 to these values looks like"---without saving those modifications to the object itself.
+
+For an operation/function to "stick," we need to reassign it. You can use a new name, or the same name, and simply overwrite the previous version of the object.
+
+```{r}
+my_values    # 1 0 3 4
+my_values+1  # 2 1 4 5--not stored
+
+# how to reassign:
+new_values <- my_values + 1   # creates new object
+my_values <- my_values + 1    # overwrites existing object
+
+# predict: what will my_values be? check below:
+
+
+# were you correct?
+
+```
+
+## B.Y.O.Data
+
+For this part, I want you to load one of your own spreadsheets into R. It can be your favorite dataset, your thesis project, or something you did for a class last semester. You can use the Import Dataset feature.
+
+```{r}
+
+```
+
+Once you load the data frame, examine the variables (columns) and observations (rows). `View()` is helpful here because it launches the Data Viewer, which lets you:
+
+-   sort the dataframe according to a column (click the column header), or
+-   search and filter for a string (text sequence) anywhere using the top-right search bar, or
+-   click the Filter button, top left, and access filters for each variable
+
+![](https://support.rstudio.com/hc/en-us/article_attachments/201725237/filters.png){fig-align="center"}
+
+View the data and explore them a bit, sorting and filtering on different columns. How familiar/different do the data look to what you're used to?
+
+Choose one or a few columns and apply some of the vector functions we've seen.
+
+You could also try mathematical operations, including among variables---e.g., dividing a "weight" vector by a squared "height" vector could create a "BMI" vector. Or dividing a height (inches) vector by 12 could create a height (feet) vector.
+
+```{r}
+
+```
+
+This has been a piecemeal way to explore your data. Next class session, we'll learn some better tools for this, but in the meantime you've gotten important practice working with vectors and feeling more familiar in R and RStudio.

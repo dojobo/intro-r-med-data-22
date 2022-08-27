@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-99.9.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System">
+<meta name="dcterms.date" content="2022-07-05">
+
+<title>Session 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="session_4_files/libs/clipboard/clipboard.min.js"></script>
+<script src="session_4_files/libs/quarto-html/quarto.js"></script>
+<script src="session_4_files/libs/quarto-html/popper.min.js"></script>
+<script src="session_4_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="session_4_files/libs/quarto-html/anchor.min.js"></script>
+<link href="session_4_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="session_4_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="session_4_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="session_4_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="session_4_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Session 4</h1>
+<p class="subtitle lead">More practice, intro to modeling</p>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 5, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="session-4-more-practice-intro-to-modeling" class="level1">
+<h1>Session 4: More practice, intro to modeling</h1>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ol type="1">
+<li>Review of what we’ve learned using a new file</li>
+<li>Linear regressions</li>
+<li>Resources and approaches to keep learning</li>
+</ol>
+</section>
+<section id="review-of-what-weve-learned-using-a-new-file" class="level2">
+<h2 class="anchored" data-anchor-id="review-of-what-weve-learned-using-a-new-file">Review of what we’ve learned using a new file</h2>
+<p>We will use the <a href="https://github.com/higgi13425/medicaldata#available-messy-datasets-beta">messy_bp.xlsx</a> file from the {medicaldata} GitHub. This file has one row per patient, but records HR and BP for 3 different visits. We’re going to clean, “tidy,” and visualize these data using what we’ve learned in sessions 2 and 3.</p>
+<p>{forcats} cheat sheet, for working with factors (categorical variables): <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/factors.pdf" class="uri">https://raw.githubusercontent.com/rstudio/cheatsheets/main/factors.pdf</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(medicaldata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="import-data-and-fix-patient-ids" class="level3">
+<h3 class="anchored" data-anchor-id="import-data-and-fix-patient-ids">Import data and fix patient IDs</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fix duplicate patient IDs:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="clean-variable-names-calculate-age-categorical-variables-as-factors" class="level3">
+<h3 class="anchored" data-anchor-id="clean-variable-names-calculate-age-categorical-variables-as-factors">Clean variable names, calculate age, categorical variables as factors</h3>
+<div class="cell">
+
+</div>
+<p>Another function for quickly examining dataframes is <code>glimpse()</code> from {dplyr}, it fits every column on the screen (they are listed vertically), with data type and preview.</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="rename-hr-and-bp-pivot-visits-longer" class="level3">
+<h3 class="anchored" data-anchor-id="rename-hr-and-bp-pivot-visits-longer">Rename HR and BP; pivot visits longer</h3>
+<p>Currently, we have one row per patient. We want 3 rows per patient (one per visit, with BP and HR columns), because this would give us one observation per row. It should look like this:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>pat_id</th>
+<th>visit</th>
+<th>sbp</th>
+<th>dbp</th>
+<th>hr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>120</td>
+<td>100</td>
+<td>97</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>2</td>
+<td>116</td>
+<td>99</td>
+<td>95</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>3</td>
+<td>110</td>
+<td>99</td>
+<td>93</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1</td>
+<td>130</td>
+<td>104</td>
+<td>99</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>2</td>
+<td>128</td>
+<td>102</td>
+<td>98</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3</td>
+<td>126</td>
+<td>100</td>
+<td>94</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+
+</div>
+</section>
+<section id="pivot-measures-wider" class="level3">
+<h3 class="anchored" data-anchor-id="pivot-measures-wider">Pivot measures wider</h3>
+<p><code>pivot_longer()</code> got rid of our separate visit columns, but BP and HR have ended up on separate rows. We have 6 rows per patient, instead of 3. So now we need to <code>pivot_wider()</code>, to transform the intermediate <code>measure</code> and <code>value</code> columns into BP and HR columns.</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="clean-visit-bp-and-hr-columns" class="level3">
+<h3 class="anchored" data-anchor-id="clean-visit-bp-and-hr-columns">Clean <code>visit</code>, <code>bp</code>, and <code>hr</code> columns</h3>
+<p><code>visit</code> should be a factor, and “v” is no longer needed. <code>bp</code> is currently character information which we can’t easily analyze; let’s separate it into two numeric variables, <code>sbp</code> and <code>dbp</code>. <code>hr</code> can now be converted to a numeric as well.</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="recode-race" class="level3">
+<h3 class="anchored" data-anchor-id="recode-race">Recode <code>race</code></h3>
+<p>We have multiple values for “White” which should be collapsed into one category.</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="examine-tidied-data" class="level3">
+<h3 class="anchored" data-anchor-id="examine-tidied-data">Examine tidied data</h3>
+<p>In addition to <code>str()</code>/<code>glimpse()</code> and <code>summary()</code>, check out also <code>skim()</code> from {skimr}.</p>
+<p>Make sure to click through <code>skim()</code>’s multiple outputs: a Data Summary showing row/column counts and grouping metadata; and a distinct data frame for each data type (numeric, character…). The data frame has a row for each variable of that type, and columns according to the data type. So numeric variables show # missing (<code>NA</code>), mean, SD, quartiles, and even a mini histogram. (You’ll need to run <code>skim(stop)</code> directly in the console, not in the notebook, to see the histograms.) Factors say whether they are ordered, # unique values, and most frequent values with their counts.</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="plot-tidied-data" class="level3">
+<h3 class="anchored" data-anchor-id="plot-tidied-data">Plot tidied data</h3>
+<p>Below are a few ways to plot these data, focusing on <code>visit</code>, but of course there are many more possibilities.</p>
+<p>The <code>facet_wrap()</code> example uses the typical <code>geom_histogram()</code>, mapped to <code>hr</code>, then adds a layer for <code>visit</code> which “facets” or subplots the histogram into one per each visit.</p>
+<p>The last example, using <code>geom_path()</code>, requires that you supply the <code>group</code> aesthetic mapping, so that it knows which nodes to connect.</p>
+<p>Remember that if you wonder about any function you see used, you can search it in the help system, by running, e.g., <code>?geom_path</code></p>
+<div class="cell">
+
+</div>
+</section>
+</section>
+<section id="linear-regressions" class="level2">
+<h2 class="anchored" data-anchor-id="linear-regressions">Linear regressions</h2>
+<p>R’s function to calculate a correlation coefficient is <code>cor()</code>. To use it with your dataframes and {dplyr}, use it inside of <code>summarize()</code>. You can also use groupings this way.</p>
+<div class="cell">
+
+</div>
+<p>Because of R’s long history as a statistical software, base-R has many builtin functions for modeling and tests. <code>lm()</code> is an example which fits a linear model to the formula you supply.</p>
+<p>Formulas have a left-hand side (LHS), a tilde (<code>~</code>), and a right-hand side (RHS), i.e., <code>LHS ~ RHS</code>. A model formula is typically structured as <code>response ~ explanatory</code>, e.g., <code>Weight ~ Height</code>. Multiple terms may be combined within one side or the other using operators like <code>+</code> and <code>*</code>.</p>
+<p>When you run <code>lm()</code> or other modeling functions, they will create a model object, which you’ll assign to an object as you would a data frame. <code>summary()</code> gives readable info about a linear model.</p>
+<div class="cell">
+
+</div>
+<p>We can also use <code>lm</code> as a method for fitting <code>geom_smooth()</code> in ggplot2:</p>
+<div class="cell">
+
+</div>
+<p>Because R accumulated many statistical functions over time in a decentralized way, there aren’t consistent design patterns, making the quirks of different functions and packages annoying to learn and use. {<a href="https://www.tidymodels.org/">tidymodels</a>} is an umbrella package which brings together many modeling functions under a common interface which is compatible with tidyverse structures and functions.</p>
+</section>
+<section id="resources-and-approaches-to-keep-learning" class="level2">
+<h2 class="anchored" data-anchor-id="resources-and-approaches-to-keep-learning">Resources and approaches to keep learning</h2>
+<ul>
+<li>Approaches
+<ul>
+<li>Work through a free ebook about a topic such as modeling, machine learning, bioinformatics in R, or geospatial analysis (see Resources below)</li>
+<li>Follow <a href="https://twitter.com/hashtag/rstats">#RStats</a> on Twitter, explore what people are talking about</li>
+<li><a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday</a>: “Join the <code>R4DS Online Learning Community</code> in the weekly <code>#TidyTuesday</code> event! Every week we post a raw dataset, a chart or article related to that dataset, and ask you to explore the data. While the dataset will be”tamed”, it will not always be tidy! As such you might need to apply various <code>R for Data Science</code> techniques to wrangle the data into a true tidy format. The goal of <code>TidyTuesday</code> is to apply your R skills, get feedback, explore other’s work, and connect with the greater <code>#RStats</code> community! As such we encourage everyone of all skills to participate!”</li>
+<li>Join <code>discoRd</code>, the R users’ Discord server: <a href="https://discord.gg/wmkCdwK" class="uri">https://discord.gg/wmkCdwK</a></li>
+</ul></li>
+<li>Resources
+<ul>
+<li><p><a href="https://www.bigbookofr.com/">Big Book of R</a>, a comprehensive directory of books, many of which are free ebooks</p></li>
+<li><p><a href="https://r4ds.had.co.nz/">R for Data Science</a> (R4DS), a standard intro ebook, covering much of the content of this course more thoroughly</p></li>
+<li><p><a href="https://moderndive.com/">ModernDive</a>, similar to R4DS, with more of an emphasis on statistics (modeling, tests, etc.)</p></li>
+<li><p><a href="https://pitt.primo.exlibrisgroup.com/permalink/01PITT_INST/i25aoe/cdi_safari_books_v2_9781492017486">The Book of R</a> (Davies, 2016) is a good general reference for base R; also has exercises</p></li>
+<li><p><a href="https://www.technology.pitt.edu/services/ondemand-training-linkedin-learning">LinkedIn Learning</a> has some R content if you prefer video</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

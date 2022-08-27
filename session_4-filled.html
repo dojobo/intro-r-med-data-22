@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-99.9.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System">
+<meta name="dcterms.date" content="2022-07-05">
+
+<title>Session 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="session_4-filled_files/libs/clipboard/clipboard.min.js"></script>
+<script src="session_4-filled_files/libs/quarto-html/quarto.js"></script>
+<script src="session_4-filled_files/libs/quarto-html/popper.min.js"></script>
+<script src="session_4-filled_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="session_4-filled_files/libs/quarto-html/anchor.min.js"></script>
+<link href="session_4-filled_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="session_4-filled_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="session_4-filled_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="session_4-filled_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="session_4-filled_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Session 4</h1>
+<p class="subtitle lead">More practice, intro to modeling</p>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 5, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="session-4-more-practice-intro-to-modeling" class="level1">
+<h1>Session 4: More practice, intro to modeling</h1>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ol type="1">
+<li>Review of what we’ve learned using a new file</li>
+<li>Linear regressions</li>
+<li>Resources and approaches to keep learning</li>
+</ol>
+</section>
+<section id="review-of-what-weve-learned-using-a-new-file" class="level2">
+<h2 class="anchored" data-anchor-id="review-of-what-weve-learned-using-a-new-file">Review of what we’ve learned using a new file</h2>
+<p>We will use the <a href="https://github.com/higgi13425/medicaldata#available-messy-datasets-beta">messy_bp.xlsx</a> file from the {medicaldata} GitHub. This file has one row per patient, but records HR and BP for 3 different visits. We’re going to clean, “tidy,” and visualize these data using what we’ve learned in sessions 2 and 3.</p>
+<p>{forcats} cheat sheet, for working with factors (categorical variables): <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/factors.pdf" class="uri">https://raw.githubusercontent.com/rstudio/cheatsheets/main/factors.pdf</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(medicaldata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="import-data-and-fix-patient-ids" class="level3">
+<h3 class="anchored" data-anchor-id="import-data-and-fix-patient-ids">Import data and fix patient IDs</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>stop <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/messy_bp.xlsx"</span>, </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">range =</span> <span class="st">"A4:M24"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>New names:
+• `BP` -&gt; `BP...8`
+• `HR` -&gt; `HR...9`
+• `BP` -&gt; `BP...10`
+• `HR` -&gt; `HR...11`
+• `BP` -&gt; `BP...12`
+• `HR` -&gt; `HR...13`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>study_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2020-10-20"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># fix duplicate patient IDs:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>stop <span class="ot">&lt;-</span> stop <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">pat_id =</span> <span class="fu">row_number</span>())</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(stop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="clean-variable-names-calculate-age-categorical-variables-as-factors" class="level3">
+<h3 class="anchored" data-anchor-id="clean-variable-names-calculate-age-categorical-variables-as-factors">Clean variable names, calculate age, categorical variables as factors</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>stop <span class="ot">&lt;-</span> stop <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>stop <span class="ot">&lt;-</span> stop <span class="sc">%&gt;%</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">birth_date =</span> </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>           <span class="fu">make_date</span>(<span class="at">year=</span>year_birth,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                     <span class="at">month=</span>month_of_birth,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                     <span class="at">day=</span>day_birth), </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">.after=</span>pat_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age =</span> </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>           <span class="fu">trunc</span>((birth_date <span class="sc">%--%</span> study_date)<span class="sc">/</span><span class="fu">years</span>(<span class="dv">1</span>)), </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">.after=</span>birth_date) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(year_birth,month_of_birth,day_birth,birth_date)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pat_id =</span> <span class="fu">as_factor</span>(pat_id),</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">race =</span> <span class="fu">as_factor</span>(race),</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">sex =</span> <span class="fu">as_factor</span>(sex),</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>         <span class="at">hispanic =</span> <span class="fu">as_factor</span>(hispanic), </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>         <span class="at">.after=</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Another function for quickly examining dataframes is <code>glimpse()</code> from {dplyr}, it fits every column on the screen (they are listed vertically), with data type and preview.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(stop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 20
+Columns: 11
+$ pat_id   &lt;fct&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18…
+$ age      &lt;dbl&gt; 52, 29, 31, 43, 57, 47, 34, 63, 59, 52, 49, 50, 57, 31, 29, 3…
+$ race     &lt;fct&gt; White, Caucasian, White, Other, Black, Black, White, Asian, O…
+$ sex      &lt;fct&gt; Male, Female, Male, Female, Male, Female, Female, Female, Mal…
+$ hispanic &lt;fct&gt; Hispanic, Not Hispanic, Hispanic, Not Hispanic, Not Hispanic,…
+$ bp_8     &lt;chr&gt; "167/92", "158/99", "171/102", "155/88", "153/90", "161/94", …
+$ hr_9     &lt;dbl&gt; 89, 77, 88, 69, 73, 71, 68, 83, 88, 92, 84, 86, 79, 77, 93, 8…
+$ bp_10    &lt;chr&gt; "156/82", "147/90", "161/90", "143/80", "145/82", "152/86", "…
+$ hr_11    &lt;dbl&gt; 82, 71, 81, 63, 66, 64, 62, 76, 82, 85, 77, 79, 73, 70, 85, 8…
+$ bp_12    &lt;chr&gt; "144/71", "138/82", "153/82", "136/72", "133/74", "144/78", "…
+$ hr_13    &lt;dbl&gt; 77, 66, 75, 58, 62, 59, 57, 70, 75, 79, 72, 75, 67, 65, 81, 7…</code></pre>
+</div>
+</div>
+</section>
+<section id="rename-hr-and-bp-pivot-visits-longer" class="level3">
+<h3 class="anchored" data-anchor-id="rename-hr-and-bp-pivot-visits-longer">Rename HR and BP; pivot visits longer</h3>
+<p>Currently, we have one row per patient. We want 3 rows per patient (one per visit, with BP and HR columns), because this would give us one observation per row. It should look like this:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>pat_id</th>
+<th>visit</th>
+<th>sbp</th>
+<th>dbp</th>
+<th>hr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>120</td>
+<td>100</td>
+<td>97</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>2</td>
+<td>116</td>
+<td>99</td>
+<td>95</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>3</td>
+<td>110</td>
+<td>99</td>
+<td>93</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1</td>
+<td>130</td>
+<td>104</td>
+<td>99</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>2</td>
+<td>128</td>
+<td>102</td>
+<td>98</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3</td>
+<td>126</td>
+<td>100</td>
+<td>94</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>stop <span class="ot">&lt;-</span> stop <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">v1_bp =</span> bp_8, <span class="at">v2_bp =</span> bp_10, <span class="at">v3_bp =</span> bp_12) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">v1_hr =</span> <span class="fu">as.character</span>(hr_9), <span class="at">v2_hr =</span> <span class="fu">as.character</span>(hr_11), <span class="at">v3_hr =</span> <span class="fu">as.character</span>(hr_13)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(hr_9, hr_11, hr_13)) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="fu">c</span>(<span class="fu">ends_with</span>(<span class="fu">c</span>(<span class="st">"bp"</span>, <span class="st">"hr"</span>))),</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to=</span><span class="st">"visit_measure"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to=</span><span class="st">"value"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(visit_measure, <span class="at">into=</span><span class="fu">c</span>(<span class="st">"visit"</span>, <span class="st">"measure"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pivot-measures-wider" class="level3">
+<h3 class="anchored" data-anchor-id="pivot-measures-wider">Pivot measures wider</h3>
+<p><code>pivot_longer()</code> got rid of our separate visit columns, but BP and HR have ended up on separate rows. We have 6 rows per patient, instead of 3. So now we need to <code>pivot_wider()</code>, to transform the intermediate <code>measure</code> and <code>value</code> columns into BP and HR columns.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>stop <span class="ot">&lt;-</span> stop <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from=</span>measure, <span class="at">values_from=</span>value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="clean-visit-bp-and-hr-columns" class="level3">
+<h3 class="anchored" data-anchor-id="clean-visit-bp-and-hr-columns">Clean <code>visit</code>, <code>bp</code>, and <code>hr</code> columns</h3>
+<p><code>visit</code> should be a factor, and “v” is no longer needed. <code>bp</code> is currently character information which we can’t easily analyze; let’s separate it into two numeric variables, <code>sbp</code> and <code>dbp</code>. <code>hr</code> can now be converted to a numeric as well.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>stop <span class="ot">&lt;-</span> stop <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">visit =</span> <span class="fu">as_factor</span>(<span class="fu">substr</span>(visit,<span class="dv">2</span>,<span class="dv">3</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(bp, <span class="at">into=</span><span class="fu">c</span>(<span class="st">"sbp"</span>, <span class="st">"dbp"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sbp=</span><span class="fu">as.numeric</span>(sbp), </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">dbp=</span><span class="fu">as.numeric</span>(dbp), </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">hr=</span><span class="fu">as.numeric</span>(hr))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="recode-race" class="level3">
+<h3 class="anchored" data-anchor-id="recode-race">Recode <code>race</code></h3>
+<p>We have multiple values for “White” which should be collapsed into one category.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>stop <span class="ot">&lt;-</span> stop <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">race =</span> <span class="fu">fct_collapse</span>(race, <span class="st">`</span><span class="at">White</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"White"</span>, <span class="st">"Caucasian"</span>, <span class="st">"WHITE"</span>)))</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>stop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 60 × 9
+   pat_id   age race  sex    hispanic     visit   sbp   dbp    hr
+   &lt;fct&gt;  &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;  &lt;fct&gt;        &lt;fct&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 1         52 White Male   Hispanic     1       167    92    89
+ 2 1         52 White Male   Hispanic     2       156    82    82
+ 3 1         52 White Male   Hispanic     3       144    71    77
+ 4 2         29 White Female Not Hispanic 1       158    99    77
+ 5 2         29 White Female Not Hispanic 2       147    90    71
+ 6 2         29 White Female Not Hispanic 3       138    82    66
+ 7 3         31 White Male   Hispanic     1       171   102    88
+ 8 3         31 White Male   Hispanic     2       161    90    81
+ 9 3         31 White Male   Hispanic     3       153    82    75
+10 4         43 Other Female Not Hispanic 1       155    88    69
+# … with 50 more rows
+# ℹ Use `print(n = ...)` to see more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="examine-tidied-data" class="level3">
+<h3 class="anchored" data-anchor-id="examine-tidied-data">Examine tidied data</h3>
+<p>In addition to <code>str()</code>/<code>glimpse()</code> and <code>summary()</code>, check out also <code>skim()</code> from {skimr}.</p>
+<p>Make sure to click through <code>skim()</code>’s multiple outputs: a Data Summary showing row/column counts and grouping metadata; and a distinct data frame for each data type (numeric, character…). The data frame has a row for each variable of that type, and columns according to the data type. So numeric variables show # missing (<code>NA</code>), mean, SD, quartiles, and even a mini histogram. (You’ll need to run <code>skim(stop)</code> directly in the console, not in the notebook, to see the histograms.) Factors say whether they are ordered, # unique values, and most frequent values with their counts.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(stop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [60 × 9] (S3: tbl_df/tbl/data.frame)
+ $ pat_id  : Factor w/ 20 levels "1","2","3","4",..: 1 1 1 2 2 2 3 3 3 4 ...
+ $ age     : num [1:60] 52 52 52 29 29 29 31 31 31 43 ...
+ $ race    : Factor w/ 4 levels "White","Other",..: 1 1 1 1 1 1 1 1 1 2 ...
+ $ sex     : Factor w/ 2 levels "Male","Female": 1 1 1 2 2 2 1 1 1 2 ...
+ $ hispanic: Factor w/ 2 levels "Hispanic","Not Hispanic": 1 1 1 2 2 2 1 1 1 2 ...
+ $ visit   : Factor w/ 3 levels "1","2","3": 1 2 3 1 2 3 1 2 3 1 ...
+ $ sbp     : num [1:60] 167 156 144 158 147 138 171 161 153 155 ...
+ $ dbp     : num [1:60] 92 82 71 99 90 82 102 90 82 88 ...
+ $ hr      : num [1:60] 89 82 77 77 71 66 88 81 75 69 ...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(stop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 60
+Columns: 9
+$ pat_id   &lt;fct&gt; 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7…
+$ age      &lt;dbl&gt; 52, 52, 52, 29, 29, 29, 31, 31, 31, 43, 43, 43, 57, 57, 57, 4…
+$ race     &lt;fct&gt; White, White, White, White, White, White, White, White, White…
+$ sex      &lt;fct&gt; Male, Male, Male, Female, Female, Female, Male, Male, Male, F…
+$ hispanic &lt;fct&gt; Hispanic, Hispanic, Hispanic, Not Hispanic, Not Hispanic, Not…
+$ visit    &lt;fct&gt; 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3…
+$ sbp      &lt;dbl&gt; 167, 156, 144, 158, 147, 138, 171, 161, 153, 155, 143, 136, 1…
+$ dbp      &lt;dbl&gt; 92, 82, 71, 99, 90, 82, 102, 90, 82, 88, 80, 72, 90, 82, 74, …
+$ hr       &lt;dbl&gt; 89, 82, 77, 77, 71, 66, 88, 81, 75, 69, 63, 58, 73, 66, 62, 7…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(stop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     pat_id        age           race        sex             hispanic  visit 
+ 1      : 3   Min.   :29.00   White:33   Male  :30   Hispanic    :24   1:20  
+ 2      : 3   1st Qu.:32.00   Other: 6   Female:30   Not Hispanic:36   2:20  
+ 3      : 3   Median :46.00   Black:15                                 3:20  
+ 4      : 3   Mean   :44.25   Asian: 6                                       
+ 5      : 3   3rd Qu.:52.25                                                  
+ 6      : 3   Max.   :63.00                                                  
+ (Other):42                                                                  
+      sbp             dbp               hr       
+ Min.   :126.0   Min.   : 68.00   Min.   :55.00  
+ 1st Qu.:144.0   1st Qu.: 80.00   1st Qu.:68.00  
+ Median :155.0   Median : 89.00   Median :76.00  
+ Mean   :155.3   Mean   : 90.05   Mean   :75.22  
+ 3rd Qu.:166.2   3rd Qu.: 98.00   3rd Qu.:82.00  
+ Max.   :192.0   Max.   :194.00   Max.   :93.00  
+                                                 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">skim</span>(stop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<caption>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">stop</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of rows</td>
+<td style="text-align: left;">60</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of columns</td>
+<td style="text-align: left;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">_______________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Column type frequency:</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">factor</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">________________________</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Group variables</td>
+<td style="text-align: left;">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: factor</strong></p>
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: left;">ordered</th>
+<th style="text-align: right;">n_unique</th>
+<th style="text-align: left;">top_counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">pat_id</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">1: 3, 2: 3, 3: 3, 4: 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">race</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Whi: 33, Bla: 15, Oth: 6, Asi: 6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sex</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Mal: 30, Fem: 30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">hispanic</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Not: 36, His: 24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">visit</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">1: 20, 2: 20, 3: 20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 12%">
+<col style="width: 17%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">skim_variable</th>
+<th style="text-align: right;">n_missing</th>
+<th style="text-align: right;">complete_rate</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">sd</th>
+<th style="text-align: right;">p0</th>
+<th style="text-align: right;">p25</th>
+<th style="text-align: right;">p50</th>
+<th style="text-align: right;">p75</th>
+<th style="text-align: right;">p100</th>
+<th style="text-align: left;">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">age</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">44.25</td>
+<td style="text-align: right;">11.04</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">52.25</td>
+<td style="text-align: right;">63</td>
+<td style="text-align: left;">▇▁▅▅▅</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sbp</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">155.33</td>
+<td style="text-align: right;">15.00</td>
+<td style="text-align: right;">126</td>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">155</td>
+<td style="text-align: right;">166.25</td>
+<td style="text-align: right;">192</td>
+<td style="text-align: left;">▅▆▇▆▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">dbp</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">90.05</td>
+<td style="text-align: right;">18.28</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">194</td>
+<td style="text-align: left;">▇▃▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">hr</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">75.22</td>
+<td style="text-align: right;">9.58</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">82.00</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: left;">▃▅▇▆▃</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="plot-tidied-data" class="level3">
+<h3 class="anchored" data-anchor-id="plot-tidied-data">Plot tidied data</h3>
+<p>Below are a few ways to plot these data, focusing on <code>visit</code>, but of course there are many more possibilities.</p>
+<p>The <code>facet_wrap()</code> example uses the typical <code>geom_histogram()</code>, mapped to <code>hr</code>, then adds a layer for <code>visit</code> which “facets” or subplots the histogram into one per each visit.</p>
+<p>The last example, using <code>geom_path()</code>, requires that you supply the <code>group</code> aesthetic mapping, so that it knows which nodes to connect.</p>
+<p>Remember that if you wonder about any function you see used, you can search it in the help system, by running, e.g., <code>?geom_path</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>stop <span class="sc">%&gt;%</span> </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>visit, <span class="at">y=</span>hr)) <span class="sc">+</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="session_4-filled_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>stop <span class="sc">%&gt;%</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(hr)) <span class="sc">+</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth=</span><span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> visit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="session_4-filled_files/figure-html/unnamed-chunk-10-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>stop <span class="sc">%&gt;%</span> </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>hr, <span class="at">color=</span>visit)) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="session_4-filled_files/figure-html/unnamed-chunk-10-3.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>stop <span class="sc">%&gt;%</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>visit, <span class="at">y=</span>hr, <span class="at">color=</span>pat_id)) <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_path</span>(<span class="fu">aes</span>(<span class="at">group=</span>pat_id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="session_4-filled_files/figure-html/unnamed-chunk-10-4.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="linear-regressions" class="level2">
+<h2 class="anchored" data-anchor-id="linear-regressions">Linear regressions</h2>
+<p>R’s function to calculate a correlation coefficient is <code>cor()</code>. To use it with your dataframes and {dplyr}, use it inside of <code>summarize()</code>. You can also use groupings this way.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>smartpill <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">cor</span>(Height, Weight))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  cor(Height, Weight)
+1           0.5384256</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>smartpill <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="fu">cor</span>(Height, Weight))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  Gender `cor(Height, Weight)`
+   &lt;dbl&gt;                 &lt;dbl&gt;
+1      0                 0.395
+2      1                 0.466</code></pre>
+</div>
+</div>
+<p>Because of R’s long history as a statistical software, base-R has many builtin functions for modeling and tests. <code>lm()</code> is an example which fits a linear model to the formula you supply.</p>
+<p>Formulas have a left-hand side (LHS), a tilde (<code>~</code>), and a right-hand side (RHS), i.e., <code>LHS ~ RHS</code>. A model formula is typically structured as <code>response ~ explanatory</code>, e.g., <code>Weight ~ Height</code>. Multiple terms may be combined within one side or the other using operators like <code>+</code> and <code>*</code>.</p>
+<p>When you run <code>lm()</code> or other modeling functions, they will create a model object, which you’ll assign to an object as you would a data frame. <code>summary()</code> gives readable info about a linear model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>hw_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Weight <span class="sc">~</span> Height, <span class="at">data=</span>smartpill)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>hw_model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Weight ~ Height, data = smartpill)
+
+Coefficients:
+(Intercept)       Height  
+   -59.8601       0.7985  </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(hw_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Weight ~ Height, data = smartpill)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-25.170 -10.040  -2.490   6.741  39.162 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -59.8601    22.3310  -2.681  0.00869 ** 
+Height        0.7985     0.1296   6.162 1.82e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 13.61 on 93 degrees of freedom
+Multiple R-squared:  0.2899,    Adjusted R-squared:  0.2823 
+F-statistic: 37.97 on 1 and 93 DF,  p-value: 1.824e-08</code></pre>
+</div>
+</div>
+<p>We can also use <code>lm</code> as a method for fitting <code>geom_smooth()</code> in ggplot2:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>smartpill <span class="sc">%&gt;%</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Height, <span class="at">y=</span>Weight)) <span class="sc">+</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>, <span class="at">formula=</span>y <span class="sc">~</span> x, <span class="at">se=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="session_4-filled_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Because R accumulated many statistical functions over time in a decentralized way, there aren’t consistent design patterns, making the quirks of different functions and packages annoying to learn and use. {<a href="https://www.tidymodels.org/">tidymodels</a>} is an umbrella package which brings together many modeling functions under a common interface which is compatible with tidyverse structures and functions.</p>
+</section>
+<section id="resources-and-approaches-to-keep-learning" class="level2">
+<h2 class="anchored" data-anchor-id="resources-and-approaches-to-keep-learning">Resources and approaches to keep learning</h2>
+<ul>
+<li>Approaches
+<ul>
+<li>Work through a free ebook about a topic such as modeling, machine learning, bioinformatics in R, or geospatial analysis (see Resources below)</li>
+<li>Follow <a href="https://twitter.com/hashtag/rstats">#RStats</a> on Twitter, explore what people are talking about</li>
+<li><a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday</a>: “Join the <code>R4DS Online Learning Community</code> in the weekly <code>#TidyTuesday</code> event! Every week we post a raw dataset, a chart or article related to that dataset, and ask you to explore the data. While the dataset will be”tamed”, it will not always be tidy! As such you might need to apply various <code>R for Data Science</code> techniques to wrangle the data into a true tidy format. The goal of <code>TidyTuesday</code> is to apply your R skills, get feedback, explore other’s work, and connect with the greater <code>#RStats</code> community! As such we encourage everyone of all skills to participate!”</li>
+<li>Join <code>discoRd</code>, the R users’ Discord server: <a href="https://discord.gg/wmkCdwK" class="uri">https://discord.gg/wmkCdwK</a></li>
+</ul></li>
+<li>Resources
+<ul>
+<li><p><a href="https://www.bigbookofr.com/">Big Book of R</a>, a comprehensive directory of books, many of which are free ebooks</p></li>
+<li><p><a href="https://r4ds.had.co.nz/">R for Data Science</a> (R4DS), a standard intro ebook, covering much of the content of this course more thoroughly</p></li>
+<li><p><a href="https://moderndive.com/">ModernDive</a>, similar to R4DS, with more of an emphasis on statistics (modeling, tests, etc.)</p></li>
+<li><p><a href="https://pitt.primo.exlibrisgroup.com/permalink/01PITT_INST/i25aoe/cdi_safari_books_v2_9781492017486">The Book of R</a> (Davies, 2016) is a good general reference for base R; also has exercises</p></li>
+<li><p><a href="https://www.technology.pitt.edu/services/ondemand-training-linkedin-learning">LinkedIn Learning</a> has some R content if you prefer video</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-99.9.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System">
+<meta name="dcterms.date" content="2022-06-21">
+
+<title>Session 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="session_2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="session_2_files/libs/quarto-html/quarto.js"></script>
+<script src="session_2_files/libs/quarto-html/popper.min.js"></script>
+<script src="session_2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="session_2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="session_2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="session_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="session_2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="session_2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="session_2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Session 2</h1>
+<p class="subtitle lead">Data wrangling</p>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 21, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(medicaldata)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(writexl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="session-2-data-wrangling" class="level1">
+<h1>Session 2: Data wrangling</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/data_cowboy.png" class="img-fluid figure-img" alt="A green fuzzy monster in a cowboy hat and mustache, lassoing a group of unruly data tables while riding a blue fuzzy monster."></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Artwork by @allison_horst</figcaption><p></p>
+</figure>
+</div>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ol type="1">
+<li>Pipes in R</li>
+<li>Selecting columns; filtering and sorting rows</li>
+<li>Creating new columns</li>
+<li>Grouping and summarizing</li>
+<li>Random sampling of rows</li>
+<li>Data cleaning: tidy data, missing values</li>
+<li>Exporting data from R</li>
+</ol>
+<p>Most of what we are doing today is in the {dplyr} and {tidyr} packages. These PDF cheat sheets are a handy reference: <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf">dplyr</a>, <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf">tidyr</a></p>
+</section>
+<section id="pipes-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="pipes-in-r">Pipes in R</h2>
+<p>The <strong>pipe</strong> is an operator, written <strong><code>%&gt;%</code></strong>, that enables us to pass the output from one function, into another function. Consider:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_values <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">1</span><span class="sc">:-</span><span class="dv">10</span>    <span class="co"># -1 to -10, as a vector</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_values</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># below i take the absolute value, then the square root, </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># then round to 3 decimal places, then calculate the mean</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">round</span>(<span class="fu">sqrt</span>(<span class="fu">abs</span>(my_values)), <span class="dv">3</span>))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># with a pipe, this can be rewritten as:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>my_values <span class="sc">%&gt;%</span> </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abs</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>()</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># more readable, right?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The keyboard shortcut for <code>%&gt;%</code> is <strong>Ctrl+Shift+M</strong> (Windows) or <strong>Cmd+Shift+M</strong> (macOS).</p>
+<p>You might also see a newer notation for the pipe, <code>|&gt;</code>. It works the same way:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_values <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abs</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">3</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We’ll be using the first pipe, also called “the magrittr pipe” after the package it comes from.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/magrittr.png" class="img-fluid figure-img" alt="magrittr logo"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">magrittr logo</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="looking-at-data-frames" class="level2">
+<h2 class="anchored" data-anchor-id="looking-at-data-frames">Looking at data frames</h2>
+<p><code>print()</code>, str()<code>,</code>View()<code>,</code>summary()`</p>
+<div class="cell">
+
+</div>
+<p>Get a histogram of a variable</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(cvdrisk, <span class="fu">aes</span>(sbp)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="selecting-columns-filtering-and-sorting-rows" class="level2">
+<h2 class="anchored" data-anchor-id="selecting-columns-filtering-and-sorting-rows">Selecting columns; filtering and sorting rows</h2>
+<section id="select-which-columns" class="level3">
+<h3 class="anchored" data-anchor-id="select-which-columns"><code>select()</code>: which columns?</h3>
+<div class="cell">
+
+</div>
+</section>
+<section id="filter-which-rows" class="level3">
+<h3 class="anchored" data-anchor-id="filter-which-rows"><code>filter()</code>: which rows?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/dplyr_filter.jpg" class="img-fluid figure-img" alt="Cartoon showing three fuzzy monsters either selecting or crossing out rows of a data table. If the type of animal in the table is “otter” and the site is “bay”, a monster is drawing a purple rectangle around the row. If those conditions are not met, another monster is putting a line through the column indicating it will be excluded. Stylized text reads “dplyr::filter() - keep rows that satisfy your conditions.”"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Artwork by @allison_horst</figcaption><p></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># comparisons: &gt; &gt;= &lt; &lt;= == !=</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># check multiple values with the %in% operator, and a vector:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># BMI is between 25 and 30 (inclusive):</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Multiple conditions can be combined with the symbols <code>&amp;</code> (ampersand, “AND”) and <code>|</code> (vertical pipe, “OR”).</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="arrange-in-what-order-should-the-rows-appear" class="level3">
+<h3 class="anchored" data-anchor-id="arrange-in-what-order-should-the-rows-appear"><code>arrange()</code>: in what order should the rows appear?</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sort by numAge:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sort by numAge, descending (oldest first):</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># sort by multiple columns:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<ol type="1">
+<li>Using <code>filter()</code>, get patients aged 30+ whose systolic blood pressure is greater than 135. Store this set as an object called <code>high_bp</code>.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="2" type="1">
+<li>Sort <code>high_bp</code> according to numeric age and systolic blood pressure.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="3" type="1">
+<li>Why doesn’t the code below work? Can you fix it?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>cvdrisk <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(age, htn, treat, smoking, race, t2d, gender, bmi) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(t2d <span class="sc">==</span> <span class="st">"Y"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(numAge)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="mutate-creating-new-columns" class="level2">
+<h2 class="anchored" data-anchor-id="mutate-creating-new-columns"><code>mutate()</code>: Creating new columns</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/dplyr_mutate.png" class="img-fluid figure-img" alt="Cartoon of cute fuzzy monsters dressed up as different X-men characters, working together to add a new column to an existing data frame. Stylized title text reads “dplyr::mutate - add columns, keep existing.”"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Artwork by @allison_horst</figcaption><p></p>
+</figure>
+</div>
+<p>Example using the <code>smartpill</code> dataset:</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="grouping-and-summarizing" class="level2">
+<h2 class="anchored" data-anchor-id="grouping-and-summarizing">Grouping and summarizing</h2>
+<p>Often, our observations can be arranged into interesting <em>groups</em>, typically based on a categorical variable (e.g., gender, race, age group, treatment). Our next step is usually to <em>summarize</em> those groups: how many observations in each group? What are the median and mean values, standard deviation, etc.?</p>
+<p>Available summarizing functions:</p>
+<ul>
+<li><code>n()</code>, <code>n_distinct()</code></li>
+<li><code>mean()</code>, <code>median()</code>, <code>sum()</code></li>
+<li><code>quantile()</code>, <code>min()</code>, <code>max()</code>, <code>IQR()</code>, <code>sd()</code>, <code>var()</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or to apply the same summary function across() columns:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/dplyr_across.png" class="img-fluid figure-img" alt="A cute round fuzzy monster with fairy wings and a wand, with a party hat on reading “mean”, bouncing across the top of a data table applying the function to each column. Stylized text reads: “dplyr::across() - use within mutate() or summarize() to apply function(s) to a selection of columns!” An example shows the use within summarize: summarize(across(where(is.numeric), mean))."></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Artwork by @allison_horst</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="slice_sample-random-sampling-of-rows" class="level2">
+<h2 class="anchored" data-anchor-id="slice_sample-random-sampling-of-rows"><code>slice_sample()</code>: Random sampling of rows</h2>
+<p>meaning of “slice”</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="data-cleaning-tidy-data-missing-values" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning-tidy-data-missing-values">Data cleaning: tidy data, missing values</h2>
+<p>When a dataset doesn’t have one observation per row and/or one variable per column, we need to <strong>reshape</strong> it using <code>{tidyr}</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/tidydata_1.jpg" class="img-fluid figure-img" alt="Stylized text providing an overview of Tidy Data. The top reads “Tidy data is a standard way of mapping the meaning of a dataset to its structure. - Hadley Wickham.” On the left reads “In tidy data: each variable forms a column; each observation forms a row; each cell is a single measurement.” There is an example table on the lower right with columns ‘id’, ‘name’ and ‘color’ with observations for different cats, illustrating tidy data structure."></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Artwork by @allison_horst</figcaption><p></p>
+</figure>
+</div>
+<p>In <code>table2</code>, one column shows <code>type</code> (of measurement), either “cases” or “population.”</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(table2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can use the information in <code>type</code> to make two new columns, <code>cases</code> and <code>population</code>, which hold the value of <code>count</code>. We do this with <code>pivot_wider()</code>:</p>
+<div class="cell">
+
+</div>
+<p>In contrast, <code>table4a</code> has a column for each year; we would like to move year information into its own column, and reduce the overall number of columns to make the table “longer”—<code>pivot_longer()</code>.</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="exporting-data-from-r" class="level2">
+<h2 class="anchored" data-anchor-id="exporting-data-from-r">Exporting data from R</h2>
+<section id="saving-as-csv-readr" class="level3">
+<h3 class="anchored" data-anchor-id="saving-as-csv-readr">Saving as CSV (readr)</h3>
+<div class="cell">
+
+</div>
+</section>
+<section id="saving-as-xlsx" class="level3">
+<h3 class="anchored" data-anchor-id="saving-as-xlsx">Saving as XLSX</h3>
+<div class="cell">
+
+</div>
+</section>
+<section id="saving-as-rds-and-rdata" class="level3">
+<h3 class="anchored" data-anchor-id="saving-as-rds-and-rdata">Saving as RDS and RData</h3>
+<p>.RDS and .RData are two file formats specific to R.</p>
+<ul>
+<li><strong>RDS</strong>, “R data structure” (I think), is for saving an R <em>object</em> (e.g., data frame) to disk. This file will be smaller than a CSV or XLSX and faster to load/save in R. This makes it a good choice for saving a dataset you’re working on.</li>
+<li><strong>RData</strong> is for saving your R <em>session</em> (Environment pane) to disk. Upon starting a session, this can be a faster way to restore your workspace than running your entire notebook again.</li>
+</ul>
+<p>To save an object as RDS:</p>
+<div class="cell">
+
+</div>
+<p>To load an RDS file into an R object:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what does this loaded RDS look like?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To work with .RData files, the easiest way is to use the load/save icons at top left of the Environment pane .</p>
+<p>There is also an RStudio save-on-exit feature which preserves your session (as a .RData), so that next time you open RStudio, you can pick up where you left off. This is convenient, but requires diligent notebook accounting.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/config-rdata.png" class="img-fluid figure-img" alt="Cropped screenshot of RStudio's global option. The selection is titled Workspace. There is a checkbox labeled &quot;Restore .RData into workspace at startup&quot;. The box is unchecked. There is a drop-down menu reading &quot;Save workspace to .RData on exit:&quot;. The option &quot;Never&quot; is selected."></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Tools &gt; Global Options… &gt; General</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
+<ul>
+<li>Problem Set 2</li>
+<li>Next time: data visualization!</li>
+</ul>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

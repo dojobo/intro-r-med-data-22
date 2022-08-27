@@ -1,0 +1,181 @@
+Session 4
+================
+Dominic Bordelon, Research Data Librarian, University of Pittsburgh
+Library System
+July 5, 2022
+
+# Session 4: More practice, intro to modeling
+
+## Agenda
+
+1.  Review of what we’ve learned using a new file
+2.  Linear regressions
+3.  Resources and approaches to keep learning
+
+## Review of what we’ve learned using a new file
+
+We will use the
+[messy_bp.xlsx](https://github.com/higgi13425/medicaldata#available-messy-datasets-beta)
+file from the {medicaldata} GitHub. This file has one row per patient,
+but records HR and BP for 3 different visits. We’re going to clean,
+“tidy,” and visualize these data using what we’ve learned in sessions 2
+and 3.
+
+{forcats} cheat sheet, for working with factors (categorical variables):
+<https://raw.githubusercontent.com/rstudio/cheatsheets/main/factors.pdf>
+
+``` r
+library(tidyverse)
+library(lubridate)
+library(readxl)
+library(janitor)
+library(tidymodels)
+library(skimr)
+library(medicaldata)
+```
+
+### Import data and fix patient IDs
+
+``` r
+# fix duplicate patient IDs:
+```
+
+### Clean variable names, calculate age, categorical variables as factors
+
+Another function for quickly examining dataframes is `glimpse()` from
+{dplyr}, it fits every column on the screen (they are listed
+vertically), with data type and preview.
+
+### Rename HR and BP; pivot visits longer
+
+Currently, we have one row per patient. We want 3 rows per patient (one
+per visit, with BP and HR columns), because this would give us one
+observation per row. It should look like this:
+
+| pat_id | visit | sbp | dbp | hr  |
+|--------|-------|-----|-----|-----|
+| 1      | 1     | 120 | 100 | 97  |
+| 1      | 2     | 116 | 99  | 95  |
+| 1      | 3     | 110 | 99  | 93  |
+| 2      | 1     | 130 | 104 | 99  |
+| 2      | 2     | 128 | 102 | 98  |
+| 2      | 3     | 126 | 100 | 94  |
+
+### Pivot measures wider
+
+`pivot_longer()` got rid of our separate visit columns, but BP and HR
+have ended up on separate rows. We have 6 rows per patient, instead of
+3. So now we need to `pivot_wider()`, to transform the intermediate
+`measure` and `value` columns into BP and HR columns.
+
+### Clean `visit`, `bp`, and `hr` columns
+
+`visit` should be a factor, and “v” is no longer needed. `bp` is
+currently character information which we can’t easily analyze; let’s
+separate it into two numeric variables, `sbp` and `dbp`. `hr` can now be
+converted to a numeric as well.
+
+### Recode `race`
+
+We have multiple values for “White” which should be collapsed into one
+category.
+
+### Examine tidied data
+
+In addition to `str()`/`glimpse()` and `summary()`, check out also
+`skim()` from {skimr}.
+
+Make sure to click through `skim()`’s multiple outputs: a Data Summary
+showing row/column counts and grouping metadata; and a distinct data
+frame for each data type (numeric, character…). The data frame has a row
+for each variable of that type, and columns according to the data type.
+So numeric variables show \# missing (`NA`), mean, SD, quartiles, and
+even a mini histogram. (You’ll need to run `skim(stop)` directly in the
+console, not in the notebook, to see the histograms.) Factors say
+whether they are ordered, \# unique values, and most frequent values
+with their counts.
+
+### Plot tidied data
+
+Below are a few ways to plot these data, focusing on `visit`, but of
+course there are many more possibilities.
+
+The `facet_wrap()` example uses the typical `geom_histogram()`, mapped
+to `hr`, then adds a layer for `visit` which “facets” or subplots the
+histogram into one per each visit.
+
+The last example, using `geom_path()`, requires that you supply the
+`group` aesthetic mapping, so that it knows which nodes to connect.
+
+Remember that if you wonder about any function you see used, you can
+search it in the help system, by running, e.g., `?geom_path`
+
+## Linear regressions
+
+R’s function to calculate a correlation coefficient is `cor()`. To use
+it with your dataframes and {dplyr}, use it inside of `summarize()`. You
+can also use groupings this way.
+
+Because of R’s long history as a statistical software, base-R has many
+builtin functions for modeling and tests. `lm()` is an example which
+fits a linear model to the formula you supply.
+
+Formulas have a left-hand side (LHS), a tilde (`~`), and a right-hand
+side (RHS), i.e., `LHS ~ RHS`. A model formula is typically structured
+as `response ~ explanatory`, e.g., `Weight ~ Height`. Multiple terms may
+be combined within one side or the other using operators like `+` and
+`*`.
+
+When you run `lm()` or other modeling functions, they will create a
+model object, which you’ll assign to an object as you would a data
+frame. `summary()` gives readable info about a linear model.
+
+We can also use `lm` as a method for fitting `geom_smooth()` in ggplot2:
+
+Because R accumulated many statistical functions over time in a
+decentralized way, there aren’t consistent design patterns, making the
+quirks of different functions and packages annoying to learn and use.
+{[tidymodels](https://www.tidymodels.org/)} is an umbrella package which
+brings together many modeling functions under a common interface which
+is compatible with tidyverse structures and functions.
+
+## Resources and approaches to keep learning
+
+-   Approaches
+    -   Work through a free ebook about a topic such as modeling,
+        machine learning, bioinformatics in R, or geospatial analysis
+        (see Resources below)
+    -   Follow [\#RStats](https://twitter.com/hashtag/rstats) on
+        Twitter, explore what people are talking about
+    -   [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday):
+        “Join the `R4DS Online Learning Community` in the weekly
+        `#TidyTuesday` event! Every week we post a raw dataset, a chart
+        or article related to that dataset, and ask you to explore the
+        data. While the dataset will be”tamed”, it will not always be
+        tidy! As such you might need to apply various
+        `R for Data Science` techniques to wrangle the data into a true
+        tidy format. The goal of `TidyTuesday` is to apply your R
+        skills, get feedback, explore other’s work, and connect with the
+        greater `#RStats` community! As such we encourage everyone of
+        all skills to participate!”
+    -   Join `discoRd`, the R users’ Discord server:
+        <https://discord.gg/wmkCdwK>
+-   Resources
+    -   [Big Book of R](https://www.bigbookofr.com/), a comprehensive
+        directory of books, many of which are free ebooks
+
+    -   [R for Data Science](https://r4ds.had.co.nz/) (R4DS), a standard
+        intro ebook, covering much of the content of this course more
+        thoroughly
+
+    -   [ModernDive](https://moderndive.com/), similar to R4DS, with
+        more of an emphasis on statistics (modeling, tests, etc.)
+
+    -   [The Book of
+        R](https://pitt.primo.exlibrisgroup.com/permalink/01PITT_INST/i25aoe/cdi_safari_books_v2_9781492017486)
+        (Davies, 2016) is a good general reference for base R; also has
+        exercises
+
+    -   [LinkedIn
+        Learning](https://www.technology.pitt.edu/services/ondemand-training-linkedin-learning)
+        has some R content if you prefer video

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-99.9.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System">
+<meta name="dcterms.date" content="2022-06-21">
+
+<title>Problem Set 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="problem_set_2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="problem_set_2_files/libs/quarto-html/quarto.js"></script>
+<script src="problem_set_2_files/libs/quarto-html/popper.min.js"></script>
+<script src="problem_set_2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="problem_set_2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="problem_set_2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="problem_set_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="problem_set_2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="problem_set_2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="problem_set_2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Problem Set 2</h1>
+<p class="subtitle lead">Data wrangling</p>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 21, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="problem-set-2" class="level1">
+<h1>Problem Set 2</h1>
+<p>Due: 6/27/22</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(medicaldata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="medicaldata-package" class="level2">
+<h2 class="anchored" data-anchor-id="medicaldata-package">{medicaldata} package</h2>
+<p>“I’m curious about these datasets, where can I learn more about them?”</p>
+<ul>
+<li>in RStudio: Packages tab (bottom right pane), locate package (use search box if needed); click package name to visit help page</li>
+<li>online: the project’s <a href="https://cran.r-project.org/web/packages/medicaldata/index.html">CRAN page</a> is the definitive home for the documentation; click on the reference manual PDF. Many projects also have a <a href="https://higgi13425.github.io/medicaldata/">GitHub page</a> which tends to be more user friendly but has less detail.</li>
+</ul>
+</section>
+<section id="more-with-missing-values-na" class="level2">
+<h2 class="anchored" data-anchor-id="more-with-missing-values-na">More with missing values (<code>NA</code>)</h2>
+<p>Last time, we looked at a couple of functions for finding missing values (<code>NA</code>) in vectors. We also find them in data frames, and have some functions for working with them there. Here are some questions you might ask, and how to code them:</p>
+<ul>
+<li>How many <code>NA</code> in <code>my_column</code>? <code>sum(is.na(my_column))</code></li>
+<li>How many <code>NA</code> in <em>all</em> columns? <code>summarize_all(~ sum(is.na(.)))</code></li>
+<li>Which rows have <code>NA</code> in <code>my_column</code>? <code>filter(is.na(my_column))</code></li>
+<li>Which rows do <em>not</em> have <code>NA</code> in <code>my_column</code>? <code>filter(!is.na(my_column))</code></li>
+</ul>
+<p>And you can use <code>NA</code> to make decisions, like:</p>
+<ul>
+<li>Dropping “incomplete observations,” i.e., rows that have <code>NA</code> in <code>my_column</code>: <code>drop_na(my_column)</code></li>
+<li>Dropping “incomplete observations,” i.e., rows that have <code>NA</code> in <em>any</em>&nbsp;column: <code>drop_na()</code></li>
+<li>Replacing <code>NA</code> in <code>my_column</code> with a value such as <code>0</code>: <code>replace_na(list(my_column = 0))</code></li>
+<li>Replacing <code>NA</code> with an imputed value (<code>map()</code> from the <code>purrr</code> package, perhaps, but many possibilities)</li>
+<li>Creating new variables that use <code>NA</code> in their logic (<code>mutate()</code> with <code>if_else()</code>&nbsp;and <code>is.na()</code>)</li>
+</ul>
+<p>We won’t try to memorize/practice all of these, I merely want you to be aware of the possibilities.</p>
+<p>Try to answer these <code>NA</code> related queries using the <code>smartpill</code> dataset:</p>
+<ul>
+<li>how many observations have a missing value for Race?</li>
+<li>broadly speaking, under what conditions might you exclude these observations from your analysis?</li>
+<li>how do you drop those observations?</li>
+</ul>
+<div class="cell">
+
+</div>
+</section>
+<section id="filtering-and-grouping-practice" class="level2">
+<h2 class="anchored" data-anchor-id="filtering-and-grouping-practice">Filtering and grouping practice</h2>
+<p>In <code>cvdrisk</code>…</p>
+<ul>
+<li>how many patients are smokers with type-2 diabetes? If you sort them according to patientID, which patientID appears first?</li>
+<li>which age group has the highest mean BMI? (you should be able to compare BMIs of all groups at once)</li>
+</ul>
+<div class="cell">
+
+</div>
+<p>In <code>smartpill</code>, I calculate the mean of <code>S.Mean.pH</code> as 3.02, but the median is 2.96.</p>
+<ul>
+<li>how many observations have an <code>S.Mean.pH</code> <em>greater than or equal to</em> 3.02?</li>
+<li>how many observations have an <code>S.Mean.pH</code> <em>less than</em> 3.02?</li>
+<li>do these numbers add up to the total number of observations in <code>smartpill</code>? If not, why not?</li>
+</ul>
+<div class="cell">
+
+</div>
+</section>
+<section id="b.y.o.data" class="level2">
+<h2 class="anchored" data-anchor-id="b.y.o.data">B.Y.O.Data</h2>
+<p>Let’s look at your data again. Feel free to use the same file as last time, though you don’t have to. You can copy-paste the import code from your last problem set, or you can recreate it.</p>
+<p>Once you have the spreadsheet imported as an object, try exploring the dataset by applying some of the new functions we learned this week: <code>select(), filter(), arrange(), mutate(), group_by(), summarize()</code>.</p>
+<div class="cell">
+
+</div>
+<p>You could also try out the histogram plot on some of your variables. The code is provided again below; change out <code>cvdrisk</code> and <code>bmi</code> for your data frame and variable. <code>binwidth</code> is provided so that you can see how to adjust the bins.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cvdrisk <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>bmi)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

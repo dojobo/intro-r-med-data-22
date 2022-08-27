@@ -1,0 +1,101 @@
+Problem Set 2
+================
+Dominic Bordelon, Research Data Librarian, University of Pittsburgh
+Library System
+June 21, 2022
+
+# Problem Set 2
+
+Due: 6/27/22
+
+``` r
+library(tidyverse)
+library(medicaldata)
+```
+
+## {medicaldata} package
+
+“I’m curious about these datasets, where can I learn more about them?”
+
+-   in RStudio: Packages tab (bottom right pane), locate package (use
+    search box if needed); click package name to visit help page
+-   online: the project’s [CRAN
+    page](https://cran.r-project.org/web/packages/medicaldata/index.html)
+    is the definitive home for the documentation; click on the reference
+    manual PDF. Many projects also have a [GitHub
+    page](https://higgi13425.github.io/medicaldata/) which tends to be
+    more user friendly but has less detail.
+
+## More with missing values (`NA`)
+
+Last time, we looked at a couple of functions for finding missing values
+(`NA`) in vectors. We also find them in data frames, and have some
+functions for working with them there. Here are some questions you might
+ask, and how to code them:
+
+-   How many `NA` in `my_column`? `sum(is.na(my_column))`
+-   How many `NA` in *all* columns? `summarize_all(~ sum(is.na(.)))`
+-   Which rows have `NA` in `my_column`? `filter(is.na(my_column))`
+-   Which rows do *not* have `NA` in `my_column`?
+    `filter(!is.na(my_column))`
+
+And you can use `NA` to make decisions, like:
+
+-   Dropping “incomplete observations,” i.e., rows that have `NA` in
+    `my_column`: `drop_na(my_column)`
+-   Dropping “incomplete observations,” i.e., rows that have `NA` in
+    *any* column: `drop_na()`
+-   Replacing `NA` in `my_column` with a value such as `0`:
+    `replace_na(list(my_column = 0))`
+-   Replacing `NA` with an imputed value (`map()` from the `purrr`
+    package, perhaps, but many possibilities)
+-   Creating new variables that use `NA` in their logic (`mutate()` with
+    `if_else()` and `is.na()`)
+
+We won’t try to memorize/practice all of these, I merely want you to be
+aware of the possibilities.
+
+Try to answer these `NA` related queries using the `smartpill` dataset:
+
+-   how many observations have a missing value for Race?
+-   broadly speaking, under what conditions might you exclude these
+    observations from your analysis?
+-   how do you drop those observations?
+
+## Filtering and grouping practice
+
+In `cvdrisk`…
+
+-   how many patients are smokers with type-2 diabetes? If you sort them
+    according to patientID, which patientID appears first?
+-   which age group has the highest mean BMI? (you should be able to
+    compare BMIs of all groups at once)
+
+In `smartpill`, I calculate the mean of `S.Mean.pH` as 3.02, but the
+median is 2.96.
+
+-   how many observations have an `S.Mean.pH` *greater than or equal to*
+    3.02?
+-   how many observations have an `S.Mean.pH` *less than* 3.02?
+-   do these numbers add up to the total number of observations in
+    `smartpill`? If not, why not?
+
+## B.Y.O.Data
+
+Let’s look at your data again. Feel free to use the same file as last
+time, though you don’t have to. You can copy-paste the import code from
+your last problem set, or you can recreate it.
+
+Once you have the spreadsheet imported as an object, try exploring the
+dataset by applying some of the new functions we learned this week:
+`select(), filter(), arrange(), mutate(), group_by(), summarize()`.
+
+You could also try out the histogram plot on some of your variables. The
+code is provided again below; change out `cvdrisk` and `bmi` for your
+data frame and variable. `binwidth` is provided so that you can see how
+to adjust the bins.
+
+``` r
+cvdrisk %>% 
+  ggplot(aes(x=bmi)) + geom_histogram(binwidth=1)
+```

@@ -1,0 +1,62 @@
+---
+title: "Intro to R for Data Analysis and Visualization"
+subtitle: "Course Outline — MD PhD Program Summer 2022"
+author: "Dominic Bordelon, Research Data Librarian, Pitt University Library System"
+format: docx
+editor: visual
+---
+
+"Intro to R for Data Analysis and Visualization" will be a four-session training series in June and July 2022, given for the MD PhD Program. No prior experience with R or RStudio is expected, nor with statistical software or computer programming. (Users will able to leverage their conceptual familiarity with Excel, for example, to great effect.)
+
+Out-of-class work will be provided and is strongly encouraged but not mandatory. Those who complete the out-of-class work (max. \~3 hours weekly) will receive a certificate of course completion.
+
+Sessions will take place in-person in Scaife 1101.
+
+Session dates:
+
+-   Tuesday, 6/14, 8:30--10am
+-   Tuesday, 6/21, 8:30--10am
+-   Tuesday, 6/28, 8:30--10am
+-   Tuesday, 7/5, 8:30--10am
+
+## Course goals
+
+Using simple but realistic examples, we will learn to:
+
+1.  orient ourselves within the RStudio environment and with the syntax and general concepts of R
+2.  import, view, manipulate, and export data in R
+3.  perform basic analysis of tabular data
+4.  create visualizations like scatter plots, histograms, and box-and-whisker plots
+5.  create documents which intermix narrative hypertext, code, and plots for ease of communicating your research in a reproducible way.
+
+## Content outline
+
+Prior to Session 1, participants will need to install [R](https://www.r-project.org/) and [RStudio Desktop](https://www.rstudio.com/products/rstudio/#rstudio-desktop). Class files will be sent to registrants in advance of each session.
+
+1.  Session 1, 6/14: RStudio orientation and R basics
+    1.  What are R and RStudio? What can you do with them?
+    2.  Packages: what they are and installing them
+    3.  Common data structures in R (data frames, vectors, lists)
+    4.  Objects and functions
+    5.  Importing spreadsheets (XLSX, CSV) as R data frames
+2.  Session 2, 6/21: Data wrangling
+    1.  Selecting columns; filtering and sorting rows
+    2.  Creating new columns
+    3.  Grouping and summarizing
+    4.  Random sampling of rows
+    5.  Data cleaning: tidy data, missing values
+    6.  Exporting data from R
+3.  Session 3, 6/28: Data visualization and narration
+    1.  ggplot2 and the grammar of graphics
+    2.  Geoms (different kinds of plots) and aesthetic mappings
+    3.  Applying more layers: additional geoms, scales, themes, labels
+    4.  Using RStudio for writing papers, presentations, etc. (RNotebooks and Quarto Documents)
+4.  Session 4, 7/5: Statistical tests, modeling, and how to keep learning
+    1.  Some common statistical tests (e.g., T-tests, Shapiro, Kolmogorov-Smirnov, etc.)
+    2.  Linear regression (and maybe more, TBD)
+    3.  Finding and using packages
+    4.  Resources to continue your learning and get help
+
+## About the trainer
+
+Dominic Bordelon is Pitt's Research Data Librarian in the University Library System (Hillman Library). He combines a formal background in humanities and library & information science with on-the-job experience in software development and IT management. He is a [Carpentries](https://carpentries.org/) certified instructor. You can read more about him [here](http://pitt.libguides.com/dominicbordelon).

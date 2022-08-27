@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-99.9.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System">
+<meta name="dcterms.date" content="2022-06-14">
+
+<title>Session 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="session_1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="session_1_files/libs/quarto-html/quarto.js"></script>
+<script src="session_1_files/libs/quarto-html/popper.min.js"></script>
+<script src="session_1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="session_1_files/libs/quarto-html/anchor.min.js"></script>
+<link href="session_1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="session_1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="session_1_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="session_1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="session_1_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Session 1</h1>
+<p class="subtitle lead">RStudio orientation and R basics</p>
+</div>
+
+
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dominic Bordelon, Research Data Librarian, University of Pittsburgh Library System </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 14, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="session-1-rstudio-orientation-and-r-basics" class="level1">
+<h1>Session 1: <strong>RStudio orientation and R basics</strong></h1>
+<p>Welcome!</p>
+<section id="agenda" class="level2">
+<h2 class="anchored" data-anchor-id="agenda">Agenda</h2>
+<ol type="1">
+<li>Course goals and structure; about the trainer</li>
+<li>What are R and RStudio? What can you do with them?</li>
+<li>RStudio Orientation</li>
+<li>Packages: what they are and installing them</li>
+<li>Import a spreadsheet as an R data frame</li>
+<li>Common data structures in R (data frames, vectors, lists)</li>
+<li>Objects and functions</li>
+<li>Next steps</li>
+</ol>
+</section>
+<section id="course-goals-and-structure" class="level2">
+<h2 class="anchored" data-anchor-id="course-goals-and-structure">Course goals and structure</h2>
+<p>In <em>Intro to R for Data Analysis and Visualization</em>, using simple but realistic examples, we will learn to:</p>
+<ol type="1">
+<li><strong>orient</strong> ourselves within the RStudio environment and with the syntax and general concepts of R</li>
+<li><strong>import</strong>, <strong>view</strong>, <strong>manipulate</strong>, and <strong>export data</strong> in R</li>
+<li>perform basic <strong>analysis</strong> of tabular data</li>
+<li>create <strong>visualizations</strong> like scatter plots, histograms, and box-and-whisker plots</li>
+<li>create <strong>documents</strong> which intermix narrative hypertext, code, and plots for ease of communicating your research in a reproducible way.</li>
+</ol>
+<p>We will meet for four sessions in Scaife 1101:</p>
+<ul>
+<li>Tuesday, 6/14, 8:30–10am: RStudio orientation and R basics</li>
+<li>Tuesday, 6/21, 8:30–10am: Data wrangling</li>
+<li>Tuesday, 6/28, 8:30–10am: Data visualization and narration</li>
+<li>Tuesday, 7/5, 8:30–10am: Statistical tests, modeling, and how to keep learning</li>
+</ul>
+<p>Out-of-class work:</p>
+<ul>
+<li>One problem set after each session, due 24 hours before next class</li>
+<li>Maximum ~3 hours weekly</li>
+</ul>
+</section>
+<section id="about-the-trainer" class="level2">
+<h2 class="anchored" data-anchor-id="about-the-trainer">About the trainer</h2>
+<p><strong>Dominic Bordelon</strong>, Research Data Librarian<br>
+University Library System – Digital Scholarship Services<br>
+<a href="mailto:dbordelon@pitt.edu">dbordelon@pitt.edu</a>, https://pitt.libguides.com/dominicbordelon</p>
+<p>Previously: background in humanities and libraries + self-taught coding interest ➝ library IT and web development (~5 yrs) ➝ Research Data Librarian at Pitt since 11/2019</p>
+<p>Support for various “data work”…</p>
+<ul>
+<li>data management planning (esp.&nbsp;for grant proposals)</li>
+<li>data cleaning, processing, analysis, visualization using tools like R and Python</li>
+<li>project version control using Git and GitHub</li>
+<li>understanding IT terms, how the internet works (HTTP, APIs), etc., as it pertains to your research</li>
+<li>data sharing and other Open Science topics</li>
+</ul>
+<p>…via consultations (<a href="https://pitt.libcal.com/appointments/research_data_librarian">book here</a>); workshops for the Pitt community; on-request training</p>
+<p><a href="https://carpentries.org/">Carpentries</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Certified Instructor</p>
+<p>Returning part-time undergrad in Ecology</p>
+</section>
+<section id="what-are-r-and-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-r-and-rstudio">What are R and RStudio?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/Rlogo.svg" class="img-fluid figure-img" alt="R logo" width="200"></p>
+</figure>
+</div>
+<p><strong>R</strong> is…</p>
+<ul>
+<li>a tool for data analysis and visualization, especially in statistical and research contexts</li>
+<li>a programming language</li>
+<li>text-based command interface</li>
+<li>biased towards tabular data and matrices (in practice)</li>
+<li>free, open-source software (FOSS) stewarded by the nonprofit, Vienna-based R Foundation</li>
+<li>full name: The R Project for Statistical Computing</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/RStudio-Logo.svg" class="img-fluid figure-img" alt="RStudio logo" width="400"></p>
+</figure>
+</div>
+<p><strong>RStudio (Desktop)</strong> is…</p>
+<ul>
+<li>an “integrated development environment” for analysis and programming in R and Python</li>
+<li>a graphical layer of software to facilitate our usage of R</li>
+<li>RStudio is a Boston-based company, founded 2009, which makes both FOSS and commercial software<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and offers hosted services</li>
+</ul>
+<section id="what-can-you-do-with-r-and-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="what-can-you-do-with-r-and-rstudio">What can you do with R and RStudio?</h3>
+<p>Let’s follow the research data life cycle…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/data-lifecycle.png" class="img-fluid figure-img" alt="A diagram of the research data life cycle. Steps: Plan, Acquire, Process, Analyze, Preserve, Share Results, Discover &amp; Re-Use" width="500"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Research Data Lifecycle; source: <a href="https://researchdata.princeton.edu/research-lifecycle-guide/research-lifecycle-guide">Princeton Research Data Service</a></figcaption><p></p>
+</figure>
+</div>
+<section id="data-collection-from-online-sources" class="level4">
+<h4 class="anchored" data-anchor-id="data-collection-from-online-sources">Data collection from online sources</h4>
+<ul>
+<li>API == Application Programming Interface
+<ul>
+<li>Many open data sources are accessible programmatically via HTTP APIs</li>
+<li>You can dynamically query the remote database and get the matching data back in a structured way, as opposed to needing to download many files.</li>
+<li>Some examples: Google Maps, Twitter, Fitbit, Census Reporter, COVID-19 Data Portal, NCI Genomic Data Commons</li>
+<li>Package: <a href="https://httr.r-lib.org/">httr</a></li>
+</ul></li>
+<li>Web scraping
+<ul>
+<li><p>Extracting information from web page HTML</p></li>
+<li><p>Package: <a href="https://rvest.tidyverse.org/">rvest</a></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="data-cleaning-processing-and-reshaping" class="level4">
+<h4 class="anchored" data-anchor-id="data-cleaning-processing-and-reshaping">Data cleaning, processing, and reshaping</h4>
+<p>For example:</p>
+<ul>
+<li>standardizing mixed column names, removing extra white space from cells</li>
+<li>splitting and combining columns</li>
+<li>detecting and handling missing values and outliers</li>
+<li>reshaping tabular data</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/pivot-longer.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Packages: <a href="https://dplyr.tidyverse.org/">dplyr</a>, <a href="https://tidyr.tidyverse.org/">tidyr</a></p>
+</section>
+<section id="combining-data-from-different-sources" class="level4">
+<h4 class="anchored" data-anchor-id="combining-data-from-different-sources">Combining data from different sources</h4>
+<p>Table joins</p>
+<p>Connect to databases</p>
+<p>Packages: <a href="https://dplyr.tidyverse.org/">dplyr</a>, <a href="https://dbplyr.tidyverse.org/">dbplyr</a></p>
+</section>
+<section id="types-of-data-analysis-and-visualization" class="level4">
+<h4 class="anchored" data-anchor-id="types-of-data-analysis-and-visualization">Types of data analysis and visualization</h4>
+<p>Statistical analysis (frequentist and Bayesian)</p>
+<p>Machine Learning (e.g., TensorFlow)</p>
+<p>Geocomputation, GIS:</p>
+<ul>
+<li>Mapping (raster and vector)</li>
+<li>Analysis and statistical modeling</li>
+</ul>
+<p>Computational text analysis</p>
+<p>Computational genomics:</p>
+<ul>
+<li>working with genomic intervals</li>
+<li>high-throughput RNA-seq and ChIP-seq analysis</li>
+<li>DNA methylation analysis</li>
+</ul>
+<p>High-performance computing (e.g., Hadoop)</p>
+</section>
+<section id="documents-slideshows-websites-books" class="level4">
+<h4 class="anchored" data-anchor-id="documents-slideshows-websites-books">Documents, slideshows, websites, books</h4>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Literate_programming">Literate programming</a>: mix narrative text, code, code outputs (e.g., viz or tables)</li>
+<li>Hypertext: include images, links, embedded video, footnotes</li>
+<li>Use <span class="math inline">\(\LaTeX\)</span> (esp.&nbsp;for math formulas)
+<ul>
+<li><p>Inline mode example:<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <span class="math inline">\(H' = -\sum_{i=1}^{R}p_i \ln p_i\)</span></p></li>
+<li><p>Display mode example:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p></li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+\theta = \frac{1}{(\frac{K_A}{|L|})^n + 1}
+\]</span></p>
+<ul>
+<li>Make inline citations and bibliography using Zotero and/or .bib files</li>
+<li>One input file, many potential output formats (PDF, HTML, Word…)</li>
+<li>Presentations can be PPTX, PDF, or browser-based (<a href="https://quarto.org/docs/presentations/revealjs/demo/">demo here</a>)</li>
+<li>For many more examples check out the <a href="https://rmarkdown.rstudio.com/gallery.html">RMarkdown gallery</a> or the <a href="https://quarto.org/docs/gallery/">Quarto gallery</a></li>
+</ul>
+</section>
+<section id="dashboards-and-other-web-apps" class="level4">
+<h4 class="anchored" data-anchor-id="dashboards-and-other-web-apps">Dashboards and other web apps</h4>
+<ul>
+<li>“Dashboard”: in-browser interface with viz of live, refreshing data (e.g., from a database), often with some interactivity</li>
+<li>Packages: <a href="https://shiny.rstudio.com/">Shiny</a>, <a href="https://plotly.com/r/">plotly</a></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="rstudio-orientation" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio-orientation">RStudio Orientation</h2>
+<section id="panes" class="level3">
+<h3 class="anchored" data-anchor-id="panes">Panes</h3>
+<ul>
+<li>Bottom left: Console
+<ul>
+<li>Run commands instantly in R <span class="math inline">\(\rightarrow\)</span> see command-line output</li>
+<li>Command history (press up arrow key)</li>
+</ul></li>
+<li>Top left: Source/Editor
+<ul>
+<li>Where you open files (tabbed)</li>
+<li>Write a script (multiple lines of R code), which you can <em>Run</em> ( = RStudio sends each line of the script to the console pane)</li>
+<li>Can also be used to write documents in plain text or markdown, or <em>notebooks</em> in RMarkdown</li>
+</ul></li>
+<li>Top right: Environment, History
+<ul>
+<li>Global Environment = workspace of your current R session</li>
+</ul></li>
+<li>Bottom right: Help, Working Directory</li>
+</ul>
+</section>
+<section id="rmarkdownquarto" class="level3">
+<h3 class="anchored" data-anchor-id="rmarkdownquarto">RMarkdown/Quarto</h3>
+<ul>
+<li>This document is written in Quarto format, which is the most recent iteration of RMarkdown. A file written in RMarkdown is also called <em>an RMarkdown Notebook</em> or just <em>an R Notebook</em>.</li>
+<li>Extends the popular <a href="https://daringfireball.net/projects/markdown/">markdown</a> format (seen on Wikipedia and GitHub) by enabling the author to include executable code <em>chunks</em>&nbsp;like the one below</li>
+<li>Switch between Source and Visual editors (buttons near top left of editor pane)</li>
+</ul>
+<p>A code chunk:</p>
+<div class="cell">
+
+</div>
+</section>
+<section id="configuration" class="level3">
+<h3 class="anchored" data-anchor-id="configuration">Configuration</h3>
+<ul>
+<li>Tools &gt; Global Options…</li>
+<li>Many options can also be configured at project level</li>
+<li>Keyboard shortcuts are very handy! Tools &gt; Keyboard Shortcuts Help</li>
+</ul>
+</section>
+<section id="files-and-file-types" class="level3">
+<h3 class="anchored" data-anchor-id="files-and-file-types">Files and file types</h3>
+<ul>
+<li><a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects"><strong>R Projects</strong></a> (.Rproj) are the suggested way of organizing your work in RStudio. Benefits include dedicated <a href="https://support.rstudio.com/hc/en-us/articles/200526217-Command-History-in-the-RStudio-IDE">command history</a> and settings.</li>
+<li><strong>R Notebooks</strong> or RMarkdown documents (.Rmd) intermix R code and text formatted with markdown; the newest version are <strong>Quarto documents</strong> (.qmd)</li>
+<li><strong>R scripts</strong> (.R) are plain-text files that can be executed by R directly. However, because the file must be parseable, this means that the only permitted “natural language” is in code comments.</li>
+</ul>
+</section>
+</section>
+<section id="packages-what-they-are-and-installing-them" class="level2">
+<h2 class="anchored" data-anchor-id="packages-what-they-are-and-installing-them">📦 Packages: what they are and installing them</h2>
+<p>In addition to R’s built-in functionality (“base R”), we can also leverage work done by the community, released as <strong>packages</strong>. The developer of a package loads it onto a public repository <strong>CRAN</strong> (the Comprehensive R Archive Network). From CRAN, R users can install the package onto their own computer.</p>
+<p>Packages are typically built for a specific purpose or to collect a specific set of functions. Here are some popular examples:</p>
+<ul>
+<li>ggplot2: makes plots (using a “grammar of graphics”)</li>
+<li>dplyr: filters, sorts, and modifies datasets</li>
+<li>shiny: creates web applications, especially dashboards</li>
+<li>stringr: has tools to help you work with character strings (text)</li>
+<li>tmap: creates maps</li>
+</ul>
+<section id="to-install-a-package" class="level3">
+<h3 class="anchored" data-anchor-id="to-install-a-package">To install a package</h3>
+<ul>
+<li>Using your mouse:
+<ul>
+<li>in the bottom right pane, click the Packages tab</li>
+<li>click the Install button at the top of the pane</li>
+<li>type the name of the package you want to install (example: <code>stringr</code>)</li>
+<li>click Install</li>
+</ul></li>
+<li>Running code: <code>install.packages("stringr")</code> (replace <code>stringr</code>&nbsp;with the name of your desired package)</li>
+</ul>
+</section>
+<section id="to-use-a-package" class="level3">
+<h3 class="anchored" data-anchor-id="to-use-a-package">To use a package</h3>
+<p>Once installed, a package needs to be activated before you can use it.</p>
+<ul>
+<li>Using your mouse:
+<ul>
+<li>in the bottom right pane, click the Packages tab</li>
+<li>find the name of the package you want to activate (by scrolling or searching in the top-right box), example: <code>stringr</code></li>
+<li>click the check-box next to the package name</li>
+</ul></li>
+<li>Running code: <code>library(stringr)</code></li>
+</ul>
+<p>You will need to reactivate the package every time you start a new R session.</p>
+</section>
+<section id="lets-install-and-attach-activate-tidyverse" class="level3">
+<h3 class="anchored" data-anchor-id="lets-install-and-attach-activate-tidyverse">Let’s install and attach (activate) tidyverse</h3>
+<p>“tidyverse” is a popular collection of packages–and we’re about to use it in the next section, so let’s install and activate:</p>
+<div class="cell">
+
+</div>
+</section>
+</section>
+<section id="import-a-spreadsheet-as-an-r-data-frame" class="level2">
+<h2 class="anchored" data-anchor-id="import-a-spreadsheet-as-an-r-data-frame">Import a spreadsheet as an R data frame</h2>
+<p>Easiest is the Import Dataset feature in the Environment pane (top right).</p>
+<p>Sources for today’s data:</p>
+<ul>
+<li>cvdRiskData <a href="https://github.com/laderast/cvdRiskData" class="uri">https://github.com/laderast/cvdRiskData</a></li>
+<li>Dr.&nbsp;Jenna Carlson, Pitt Biostatistics and Human Genetics <a href="https://hsls.libguides.com/MBISworkshops/Rintro" class="uri">https://hsls.libguides.com/MBISworkshops/Rintro</a></li>
+</ul>
+<p>The Import Dataset feature generates code, which you can paste into a code chunk, like the one below:</p>
+<div class="cell">
+
+</div>
+<p>This way, the file-loading step will be saved in your document, so that you can easily recreate your session.</p>
+</section>
+<section id="common-data-structures-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="common-data-structures-in-r">Common data structures in R</h2>
+<section id="data-frames" class="level3">
+<h3 class="anchored" data-anchor-id="data-frames">Data frames</h3>
+<p>A <strong>data frame</strong> is structured in rows (“observations”) and columns (“variables”). This can also be called tabular data. Our spreadsheet above is imported as a data frame.</p>
+<p>Let’s use the <code>View()</code> and <code>str()</code> functions to examine the data frame:</p>
+<div class="cell">
+
+</div>
+<p>You can refer to one variable (column) in a data frame with the <strong><code>$</code></strong> (dollar sign):</p>
+<div class="cell">
+
+</div>
+<p>Data frames are the most typical structure we’ll encounter.</p>
+</section>
+<section id="vectors" class="level3">
+<h3 class="anchored" data-anchor-id="vectors">Vectors</h3>
+<p>On a more basic level than a data frame, a <strong>vector</strong> is R’s way to handle multiple items. We create a vector using the <code>c()</code> function. For example, suppose I observe the measurements <code>41.8</code>, <code>85.0</code>, and <code>114.0</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fl">41.8</span>, <span class="fl">85.0</span>, <span class="fl">114.0</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># we can write comments with the pound sign;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># these are ignored by R</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># to save a vector as an object:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>size <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">41.8</span>, <span class="fl">85.0</span>, <span class="fl">114.0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Vectors are designed to work efficiently with many repetitive or setwise operations, for example, applying a mathematical operator or function to every item in a vector. We also say these functions/operations are <strong>vectorized</strong>.</p>
+<div class="cell">
+
+</div>
+<p>A limitation of vectors is that every item must be of the same data type (e.g., character or numeric). But they’re sort of R’s default data structure. They’re also the foundation of data frames: each column is actually a vector, which means we’ll be working with them a lot.</p>
+</section>
+<section id="exercise-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
+<p>A handy function is <code>help()</code>, which queries R’s documentation system. Most commonly, you’ll look up functions. You can search by running <code>help(topic)</code> or <code>?topic</code>, e.g., <code>?sqrt</code>. Notice that the result will appear in the Help pane.</p>
+<ol type="1">
+<li>There is confusion among some R users what the “c” in the function <code>c()</code> stands for. Using the help system, what does <code>c()</code> do? What do you think “c” stands for?</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="2" type="1">
+<li>Create a vector of arbitrary patient ages and store it as an object called <code>ages</code>.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="3" type="1">
+<li>What do you estimate is the mean age? Calculate it using <code>mean()</code>.</li>
+</ol>
+<div class="cell">
+
+</div>
+<ol start="4" type="1">
+<li>What is the mean value of the <code>Size</code> variable in <code>tg</code>? How about <code>numAge</code> in <code>cvdr</code>?</li>
+</ol>
+<div class="cell">
+
+</div>
+</section>
+<section id="matrices" class="level3">
+<h3 class="anchored" data-anchor-id="matrices">Matrices</h3>
+<p>Vectors are one-dimensional. For 2+ dimensions, we need a <strong>matrix</strong>. We won’t use them very much in this course, but they are available for you to investigate further.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>     <span class="co"># the integer sequence 1 to 9, as a vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="lists" class="level3">
+<h3 class="anchored" data-anchor-id="lists">Lists</h3>
+<p>Lists are collections of items; unlike vectors, they are potentially heterogeneous. You can also give a name to each item in a list if desired. Many specialized data structures are lists with special attributes and functionality.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"F"</span>, <span class="st">"M"</span>),</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">group =</span> <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"1"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>     <span class="st">"cm"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     <span class="dv">25</span><span class="sc">:</span><span class="dv">35</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="factors" class="level3">
+<h3 class="anchored" data-anchor-id="factors">Factors</h3>
+<p>A <strong>factor</strong> is a vector which represents a categorical variable, i.e., that there are only a finite number of possible values. Examples of categorical variables:</p>
+<ul>
+<li>assigned biological sex, gender</li>
+<li>month, day of week, week number of year</li>
+<li>shoe size, athletic weight class (but not: height, weight)</li>
+</ul>
+<p>The possible values of a factor are its <strong>levels</strong>. Levels may be <strong>ordered</strong> (e.g., month) or unordered (e.g., sex, eye color).</p>
+<p>To create a factor, use the <code>factor()</code> function. R will automatically determine the levels, but you can specify them, as well as whether they are ordered.</p>
+<div class="cell">
+
+</div>
+<p>Sometimes your dataset might have categorical data coded numerically (e.g., <code>1</code> for females and <code>2</code>&nbsp;for males), such that you will also want to have a way to store human-readable <strong>labels</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"2"</span>),</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"F"</span>, <span class="st">"M"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="objects-and-functions" class="level2">
+<h2 class="anchored" data-anchor-id="objects-and-functions">Objects and functions</h2>
+<p>When we give R a command, it usually returns an <strong>object</strong> of some kind. We can usually see a representation of this object in the console when R returns the object.</p>
+<p>To store the object in memory, in order to view it more than once or modify it, we will need to assign a name to the object. <em>(Note: saving to memory ≠ saving to disk!)</em> We’ll use the <strong>assignment operator</strong>, written <strong><code>&lt;-</code></strong>, between our new object’s name and the function call. For example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fl">41.8</span>, <span class="fl">85.0</span>, <span class="fl">114.0</span>)      <span class="co"># creates a vector with three values</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>size <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">41.8</span>, <span class="fl">85.0</span>, <span class="fl">114.0</span>)      <span class="co"># creates the vector and saves it to an object called "size"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># note the "size" object in your Environment tab!</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>size</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="data-types" class="level3">
+<h3 class="anchored" data-anchor-id="data-types">Data types</h3>
+<p>On object’s data type determines what kinds of operations we can do on the object. For example, numeric and character vectors have different behaviors:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>group <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Group 1"</span>, <span class="st">"Group 2"</span>, <span class="st">"Group 1"</span>, <span class="st">"Group 1"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>size <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>group <span class="sc">*</span> <span class="dv">2</span>   <span class="co"># error!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To find out an object’s data type, you can see it listed in the Environment tab (<code>chr</code>, <code>num</code>) or run the <code>typeof()</code> function.</p>
+</section>
+<section id="functions" class="level3">
+<h3 class="anchored" data-anchor-id="functions">Functions</h3>
+<p>A function can have one or more <strong>arguments</strong>; for example, the <code>sqrt()</code> function takes an <code>x</code> argument, which we could also write as <code>sqrt(x)</code>. In the code chunk below, we use the <code>size</code> object for the <code>x</code> argument:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R also supports "named arguments":</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We say that a function <strong>returns</strong> its output (often an object); <code>sqrt(16)</code> returns <code>4</code>.</p>
+<p>You can also write your own functions, using <strong><code>function()</code></strong>. Here is a function that raises <code>x</code> to the <code>y</code> power:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>     <span class="co">#   == 2^3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="exercise-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
+<ol type="1">
+<li>Consider:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>my_seq <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>my_seq <span class="ot">&lt;-</span> <span class="fu">c</span>(my_seq, <span class="dv">4</span>, <span class="dv">5</span>)    <span class="co"># predict my_seq's value</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>my_seq <span class="ot">&lt;-</span> <span class="fu">c</span>(my_seq, <span class="dv">6</span>, <span class="fu">c</span>(<span class="dv">7</span>, <span class="dv">8</span>))    <span class="co"># and here?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Consider the factor in the code chunk below. Does <code>bases</code> have the value you expect? If not: what do you think is going on here?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bases <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"C"</span>, <span class="st">"G"</span>, <span class="st">"A"</span>, <span class="st">"T"</span>, <span class="st">"G"</span>, <span class="st">"U"</span>, <span class="st">"C"</span>), </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"C"</span>, <span class="st">"G"</span>, <span class="st">"T"</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>bases</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Write <code>bmi()</code> and <code>bmi_imperial()</code> functions. There is some template code below to get you started. (To calculate BMI: divide weight (kg) by height (m) squared. For Imperial units (lb/in), also multiply the result by 703.) Try to apply it with some numbers and see if it gives expected results.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bmi <span class="ot">&lt;-</span> <span class="cf">function</span>(weight_kg, height_m) {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>bmi_imperial <span class="ot">&lt;-</span> <span class="cf">function</span>(weight_lb, height_in) {</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>test_weights <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>test_heights <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="fu">bmi</span>(test_weights, test_heights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="wrapping-up" class="level2">
+<h2 class="anchored" data-anchor-id="wrapping-up">Wrapping up</h2>
+<p>Today we learned about:</p>
+<ul>
+<li>R and RStudio orientation</li>
+<li>Importing spreadsheets</li>
+<li>Data structures: data frames, vectors, matrices, lists, factors</li>
+<li>Object and functions</li>
+</ul>
+<p>Expect Problem Set 1 later today, due 24 hrs before next session</p>
+<p>Next time, we’ll do useful work with data frames!</p>
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1" role="doc-endnote"><p>The Carpentries is a community which “builds global capacity in essential data and computational skills for conducting efficient, open, and reproducible research” through evidence-based instructor and mentor training and open learning materials (<a href="https://carpentries.org/about/">link</a>). It is fiscally sponsored by Community Initiatives, a CA-based 501(c)(3) nonprofit.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>FOSS products: RStudio Desktop, RStudio Server, Shiny Server, and many R packages. Commercial products: RStudio Team, RStudio Workbench.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Shannon Diversity Index, https://en.wikipedia.org/wiki/Diversity_index#Shannon_index<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>the Hill equation, <a href="https://en.wikipedia.org/wiki/Hill_equation_(biochemistry)" class="uri">https://en.wikipedia.org/wiki/Hill_equation_(biochemistry)</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
