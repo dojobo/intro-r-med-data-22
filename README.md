@@ -39,7 +39,7 @@ Please feel free to open an Issue and/or fork and PR this repo!
 
 ## Acknowledgements
 
-Thanks to Melissa Ratajeski, Jenna Carlson, Ravi Patel, Moira Stockton, and Forrest Shooster for sharing materials (especially datasets) and insights. Thanks to Hadley Wickham & Garret Grolemund for [R for Data Science](https://r4ds.had.co.nz/), and to the R and tidyverse development communities.
+Thanks to Melissa Ratajeski, Jenna Carlson, Ravi Patel, Moira Stockton, and Forrest Shooster for sharing materials (especially datasets) and insights. Thanks to Hadley Wickham & Garret Grolemund for [R for Data Science](https://r4ds.had.co.nz/), and to the R and tidyverse development communities. Deep thanks to Moira Stockton for acting as a teaching assistant during sessions.
 
 ## References
 
